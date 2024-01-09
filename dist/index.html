@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Password</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <form id="signInForm">
+                <h2>Вход</h2>
+                <div class="inputBox">
+                    <input
+                        type="text"
+                        name="email"
+                        placeholder="Email"
+                        id="signInEmail"
+                    />
+                </div>
+
+                <div class="inputBox">
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Пароль"
+                        id="signInpass"
+                    />
+                </div>
+                <span class="confirm">
+                    <p>Пользователь не найден</p>
+                    <img
+                        class="spinner__login"
+                        src="/dist/img/spinner/spinner5.svg"
+                        alt=""
+                    />
+                </span>
+                <div class="inputBox">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#" id="signUp">Регистрация</a>
+                </div>
+                <div class="inputBox">
+                    <button class="login_button" id="login" type="submit">
+                        Вход
+                    </button>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="rememberMe" name="scales" />
+                    <label for="rememberMe">Запомнить меня</label>
+                </div>
+            </form>
+
+            <!-- Регистрация -->
+            <form id="signUpForm">
+                <h2>Регистрация</h2>
+                <div class="inputBox">
+                    <input
+                        type="text"
+                        name="email"
+                        placeholder="Email*"
+                        id="signUpEmail"
+                    />
+                </div>
+
+                <div class="inputBox">
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Имя пользователя*"
+                        id="signUpName"
+                    />
+                </div>
+
+                <div class="inputBox">
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Придумайте пароль*"
+                        id="signUpPassword"
+                    />
+                </div>
+
+                <div class="inputBox">
+                    <input
+                        type="password"
+                        name="password2"
+                        placeholder="Повторите пароль*"
+                        id="signUpPasswordCorrect"
+                    />
+                </div>
+
+                <span class="confirm">
+                    <p>Пароли не совпадают</p>
+                    <img
+                        class="spinner"
+                        src="/dist/img/spinner/spinner5.svg"
+                        alt=""
+                    />
+                </span>
+                <div class="inputBox">
+                    <button class="register_button" id="register" type="submit">
+                        Регистрация
+                    </button>
+                </div>
+
+                <div class="inputBox group">
+                    <a href="#">Уже есть аккаунт? <b id="signIn">Войти</b></a>
+                </div>
+            </form>
+        </div>
+        <!-- ./container -->
+        <div class="lock">
+            <div class="lock__img">
+                <img class="lock-body" src="lock_svg/1111.png" alt="" />
+                <img class="lock-head" src="lock_svg/head_lock.png" alt="" />
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+        <script src="firebase.bundle.js"></script>
+        <script src="app.bundle.js"></script>
+    </body>
+</html>
