@@ -13,3 +13,5 @@ signIn.addEventListener('click', (event) => {
     event.preventDefault();
     body.classList.remove('signup');
 });
+
+// новые функции будут позже
